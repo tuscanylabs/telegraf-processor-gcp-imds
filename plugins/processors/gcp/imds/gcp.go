@@ -5,6 +5,7 @@ import (
 	_ "embed"
 	"errors"
 	"fmt"
+	"strconv"
 	"time"
 
 	"github.com/coocood/freecache"
@@ -214,7 +215,7 @@ func getTagFromInstanceIdentityDocument(o *imds.GetMetadataInstanceOutput, tag s
 	case "machineType":
 		return o.MachineType
 	case "id":
-		return o.ID
+		return strconv.Itoa(o.ID)
 	case "zone":
 		return o.Zone
 	default:

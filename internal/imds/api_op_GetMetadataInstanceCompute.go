@@ -51,7 +51,7 @@ func buildGetInstanceMetadataOutput(resp *http.Response) (v interface{}, err err
 // InstanceIdentityDocument provides the shape for unmarshaling an metadata instance document
 type InstanceIdentityDocument struct {
 	Hostname    string `json:"hostname,omitempty"`
-	ID          string `json:"id,omitempty"`
+	ID          int    `json:"id,omitempty"`
 	Image       string `json:"image,omitempty"`
 	MachineType string `json:"machineType,omitempty"`
 	Zone        string `json:"zone,omitempty"`
